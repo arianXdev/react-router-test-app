@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 import "./App.css";
 
 function App() {
 	return (
 		<div className="App">
+			<Outlet />
 			<header className="App-header">
 				<h1>Test React Router Project</h1>
 				{/* About page and Books page */}

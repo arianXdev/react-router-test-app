@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import App from "./App";
 
-import { About, Books, Contact } from "./components";
+import { About, Books, Book, Contact } from "./components";
 
 import "./index.css";
 

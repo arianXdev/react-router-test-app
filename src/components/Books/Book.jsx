@@ -13,7 +13,7 @@ const Book = (prop) => {
 			<h2>Book Name: {book.fields.Title}</h2>
 			<h2>Author: {book.fields.Author}</h2>
 			<h2>Country: {book.fields.Country}</h2>
-			<a className={styles.btn} href={book.fields.Amazon_Link} target="_blank">
+			<a className={styles.btn} href={book.fields.Amazon_Link} target="_blank" rel="noreferrer">
 				Buy it
 			</a>
 		</div>

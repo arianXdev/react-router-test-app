@@ -1,9 +1,11 @@
-import { useParams, Link } from "react-router-dom";
-import { getBook } from "../../data/data";
+import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
+import { getBook, removeBook } from "../../data/data";
 
 import styles from "./Book.module.css";
 
 const Book = (prop) => {
+	const navigate = useNavigate();
+	const location = useLocation();
 	const params = useParams();
 	const book = getBook(params.bookId);
 
@@ -17,6 +19,16 @@ const Book = (prop) => {
 				<a className={styles.btn} href={book.fields.Amazon_Link} target="_blank" rel="noreferrer">
 					Buy it
 				</a>
+
+				<button
+					onClick={() => {
+						removeBook(book.id);
+						navigate("/books" + location.search); // redirects user to /books after removing the book
+					}}
+					className={`${styles.btn} ${styles["btn--red"]}`}
+				>
+					Delete it!
+				</button>
 			</div>
 		);
 	} else {

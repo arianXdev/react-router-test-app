@@ -1,4 +1,4 @@
-const books = [
+let books = [
 	{
 		id: "rec0LmJ5c6IO6LDoe",
 		fields: {
@@ -339,4 +339,15 @@ export const getBooks = () => books;
 
 export const getBook = (id) => {
 	return books.find((book) => book.id === id); // returns the specifig book with the id
+};
+
+export const removeBook = (id) => {
+	books = books.filter((book) => book.id !== id); // returns an array of object that doesn't have the id
+
+	// Another way to do
+	// books.map((book, index) => {
+	// 	if (book.id == id) {
+	// 		books.splice(index, 1);
+	// 	}
+	// });
 };

@@ -24,6 +24,9 @@ root.render(
 					</Route>
 				</Route>
 				<Route path="/contact" element={<Contact />} />
+
+				{/* 404 Error | Not Found */}
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>

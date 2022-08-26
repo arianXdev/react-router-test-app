@@ -1,11 +1,12 @@
 import { getBooks } from "../../data/data";
 
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink, useSearchParams } from "react-router-dom";
 
 import styles from "./Books.module.css";
 
 export default function Books() {
 	const books = getBooks();
+	const [searchParams, setSearchParams] = useSearchParams(); // like useState Hook but in the browser's URL
 
 	return (
 		<section style={{ display: "flex" }}>

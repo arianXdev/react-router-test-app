@@ -11,8 +11,7 @@ function App() {
 				{/* About page and Books page */}
 
 				<nav className="nav">
-					<Link to="/books">Books Page</Link>
-					{"   "}
+					<Link to="/books">Books Page</Link> | {"    "}
 					<Link to="/about">About us</Link>
 				</nav>
 			</header>

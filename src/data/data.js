@@ -338,5 +338,5 @@ const books = [
 export const getBooks = () => books;
 
 export const getBook = (id) => {
-	return books.find((book) => book.id == id); // returns the specifig book with the id
+	return books.find((book) => book.id === id); // returns the specifig book with the id
 };

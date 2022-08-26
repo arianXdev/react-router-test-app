@@ -11,8 +11,17 @@
 	background-color: #777;
 	box-shadow: 0 0 10px #777;
 	transition: all 0.3s ease-in-out;
+	margin: 10px;
 }
 
 .btn:hover {
 	background-color: rgb(49, 49, 49);
+}
+
+.btn--red {
+	background-color: rgb(240, 12, 61);
+}
+
+.btn--red:hover {
+	background-color: rgb(179, 0, 39);
 }

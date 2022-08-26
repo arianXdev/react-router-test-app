@@ -9,7 +9,6 @@ export default function Books() {
 	const location = useLocation();
 	const books = getBooks();
 
-	console.log(location);
 	return (
 		<section style={{ display: "flex" }}>
 			<div className={styles.Books}>

@@ -1,6 +1,6 @@
 import { getBooks } from "../../data/data";
 
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 import styles from "./Books.module.css";
 
@@ -15,9 +15,21 @@ export default function Books() {
 				<input type="text" placeholder="Search" />
 
 				{books.map((book, index) => (
-					<Link style={{ display: "block" }} to={`/books/${book.id}`} key={index}>
+					<NavLink
+						style={({ isActive }) => {
+							return {
+								display: "block",
+								padding: "10px 0",
+								color: isActive ? "red" : undefined,
+								fontWeight: isActive ? "900" : undefined,
+								fontSize: isActive ? "22px" : undefined,
+							};
+						}}
+						to={`/books/${book.id}`}
+						key={index}
+					>
 						{book.fields.Title}
-					</Link>
+					</NavLink>
 				))}
 			</div>
 			<Outlet />

@@ -5,7 +5,6 @@ import "./App.css";
 function App() {
 	return (
 		<div className="App">
-			<Outlet />
 			<header className="App-header">
 				<h1>Test React Router Project</h1>
 				{/* About page and Books page */}
@@ -15,6 +14,8 @@ function App() {
 					<Link to="/about">About us</Link> | {"    "}
 					<Link to="/contact">Contact us</Link>
 				</nav>
+
+				<Outlet />
 			</header>
 		</div>
 	);

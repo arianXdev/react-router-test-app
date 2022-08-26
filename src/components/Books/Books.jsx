@@ -1,13 +1,15 @@
 import { getBooks } from "../../data/data";
 
-import { Outlet, NavLink, useSearchParams } from "react-router-dom";
+import { Outlet, NavLink, useSearchParams, useLocation } from "react-router-dom";
 
 import styles from "./Books.module.css";
 
 export default function Books() {
-	const books = getBooks();
 	const [searchParams, setSearchParams] = useSearchParams(); // like useState Hook but in the browser's URL
+	const location = useLocation();
+	const books = getBooks();
 
+	console.log(location);
 	return (
 		<section style={{ display: "flex" }}>
 			<div className={styles.Books}>
@@ -38,7 +40,7 @@ export default function Books() {
 
 						// if it exists
 						let name = book.fields.Title.toLowerCase();
-						return name.startsWith(filter.toLowerCase());
+						return name.includes(filter.toLowerCase());
 					})
 					.map((book, index) => (
 						<NavLink
@@ -51,7 +53,7 @@ export default function Books() {
 									fontSize: isActive ? "22px" : undefined,
 								};
 							}}
-							to={`/books/${book.id}`}
+							to={`/books/${book.id}${location.search}`}
 							key={index}
 						>
 							{book.fields.Title}

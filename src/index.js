@@ -18,7 +18,8 @@ root.render(
 				{/* You can think about a <Route> kind of like an if statement; if its path matches the current URL, it renders its element */}
 				<Route path="/" element={<App />}>
 					<Route path="about" element={<About />} />
-					<Route path="Books" element={<Books />} />
+					<Route path="books" element={<Books />} />
+					<Route path="books/:bookId" element={<Book />} />
 				</Route>
 				<Route path="/contact" element={<Contact />} />
 			</Routes>

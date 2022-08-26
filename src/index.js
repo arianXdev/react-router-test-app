@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { About, Books, Book, Contact } from "./components";
+import { About, Books, Book, Contact, NotFound } from "./components";
 import App from "./App";
 
 import "./index.css";

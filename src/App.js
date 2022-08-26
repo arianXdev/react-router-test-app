@@ -6,7 +6,11 @@ function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<h1>Test React Router Project</h1>
+				<h1>
+					<Link className="title" to="/">
+						Test React Router Project
+					</Link>
+				</h1>
 				{/* About page and Books page */}
 
 				<nav className="nav">

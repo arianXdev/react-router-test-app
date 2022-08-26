@@ -3,9 +3,8 @@ import ReactDOM from "react-dom/client";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { About, Books, Book, Contact } from "./components";
 import App from "./App";
-
-import { About, Books, Contact } from "./components";
 
 import "./index.css";
 
@@ -17,9 +16,12 @@ root.render(
 			<Routes>
 				{/* You can think about a <Route> kind of like an if statement; if its path matches the current URL, it renders its element */}
 				<Route path="/" element={<App />}>
+					<Route index element={<p>Sorry! Nothing's here :(</p>} />
 					<Route path="about" element={<About />} />
-					<Route path="books" element={<Books />} />
-					<Route path="books/:bookId" element={<Book />} />
+					<Route path="books" element={<Books />}>
+						<Route index element={<main style={{ padding: "2rem", margin: "0 auto" }}>Select one of the books!</main>} />
+						<Route path=":bookId" element={<Book />} />
+					</Route>
 				</Route>
 				<Route path="/contact" element={<Contact />} />
 			</Routes>

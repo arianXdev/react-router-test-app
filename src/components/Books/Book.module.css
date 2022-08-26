@@ -1,0 +1,18 @@
+.Book {
+	display: inline-block;
+	padding: 1rem;
+}
+
+.btn {
+	text-decoration: none;
+	border-radius: 20px;
+	padding: 0.7em 2em;
+	color: #fff;
+	background-color: #777;
+	box-shadow: 0 0 10px #777;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+	background-color: rgb(49, 49, 49);
+}

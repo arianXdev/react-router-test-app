@@ -216,15 +216,6 @@ const books = [
 		},
 	},
 	{
-		id: "rec3hAfPEV2K07trD",
-		fields: {
-			Title: "My Grandmother's Cactus: Stories by Egyptian Women (Emerging Voices (Quartet)) ",
-			Author: "Marilyn Booth",
-			Country: "Egypt",
-			Amazon_Link: "https://www.amazon.com/My-Grandmothers-Cactus-Stories-Egyptian/dp/0704326493?tag=pueblocolab-20",
-		},
-	},
-	{
 		id: "rec3k0WupWUd0Y0KP",
 		fields: {
 			Title: "A Free Man",
@@ -345,3 +336,7 @@ const books = [
 
 // A function which returns a list of books.
 export const getBooks = () => books;
+
+export const getBook = (id) => {
+	return books.find((book) => book.id == id); // returns the specifig book with the id
+};
